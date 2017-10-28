@@ -1,0 +1,14 @@
+{
+  "name": "speakinganimalsapp",
+  "version": "1.0.0",
+  "description": "routing excercise",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josue Marinero",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

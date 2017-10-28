@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Methods</title>
+    <script type="application/javascript" src="jquery-3.2.1.min.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: teal;
+            float: left;
+            margin: 20px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+   <div>Please don't fade me</div>
+   <div>I'm begging you, please!</div>
+   <div>Help Help Help</div>
+   
+   <button>Click Me</button>
+   
+    <script type="application/javascript">
+        $("button").on("click",function(){
+           $("div").fadeOut(1000,function(){
+               console.log("fade completed");
+           });
+            
+        });
+        
+    </script>
+</body>
+</html>
