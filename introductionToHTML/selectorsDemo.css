@@ -1,0 +1,35 @@
+/*Elements*/
+
+/*class*/
+
+/*id*/
+
+/*Stars*/
+/*applies css for all the objects in a page*/
+*{
+    border: 1px solid lightgray;
+}
+/*Descendant Selector*/
+/*takes two or more tag names or selectors*/
+li a{
+   color: red; 
+}
+
+/*Adjacent Selector*/
+/*selects siblings selectors, select all the selectors that come after the tags we are selecting*/
+h4 + ul{
+    border: 4px solid red;
+}
+
+/*Attribute Selector*/
+/*is a way to select elements based off of any attribute*/
+a[href="http://www.google.com"]{
+    background: blue;
+} 
+
+/*nth of type*/
+/*selects every n number tag of a page*/
+/*this is good for even rows in a table*/
+li:nth-of-type(even){
+    background: purple;
+}

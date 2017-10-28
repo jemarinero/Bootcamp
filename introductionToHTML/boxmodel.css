@@ -1,0 +1,21 @@
+p{
+/*content - width and height*/
+    width: 50%;
+/*borders*/
+    border: 2px solid blue;
+/*padding*/
+/*    padding: 10px;*/
+    padding-left: 40px;
+/*margin*/
+/*    margin top*/
+/*    margin: 100px;*/
+/*    margin top left bottom right*/
+/*    margin: 20px 40px 500px 100px;*/
+/*    margin 0 top auto left 0 bottom auto right*/
+/*    margin: 0 auto 0 auto;,*/
+/*    margin 0 on top and auto on everything else*/
+/*    margin: 0 auto;*/
+/*    margin top and left*/
+    margin: 50px 20px;
+}
+
