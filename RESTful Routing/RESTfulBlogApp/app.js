@@ -35,6 +35,34 @@ app.get("/blogs",function(req,res){
     });
 });
 
+//new route
+app.get("/blogs/new",function(req,res){
+    res.render("new");
+});
+//create route
+app.post("/blogs",function(req, res){
+    //create blog
+    Blog.create(req.body.blog, function(err, newBlog){
+        if(err){
+            res.render("new");
+        } else {
+            //then, redirect to the index
+            res.redirect("/blogs")
+        }
+    });
+});
+
+//show route
+app.get("/blogs/:id", function(req, res){
+    Blog.findById(req.params.id, function(err, foundBlog){
+        if(err){
+            res.redirect("/blogs");
+        } else {
+            res.render("show",{blog: foundBlog})
+        }
+    });
+});
+
 app.listen(3000,"localhost", function(){
     console.log("server is running");
 });
