@@ -8,6 +8,7 @@ var Campground    = require("./models/campground");
 var Comment       = require("./models/comment");
 var User          = require("./models/user");
 var seedDB        = require("./seeds");
+var methodOverride = require("method-override");
 
 //requiring routes
 var commentRoutes    = require("./routes/comments");
@@ -20,7 +21,8 @@ mongoose.Promise = global.Promise;
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname+"/public"));
-seedDB();
+app.use(methodOverride("_method"));
+//seedDB(); //seed the database
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({
